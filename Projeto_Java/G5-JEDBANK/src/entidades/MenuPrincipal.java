@@ -18,11 +18,15 @@ public class MenuPrincipal{
 	}
 
 	public void getCabecalho() {	
-		System.out.println("\n===========================================================");
-		System.out.println("                        G5 JEDBANK");
-		System.out.println("===========================================================");
-		System.out.println("SE VOCÊ NÃO CUIDA DO SEU DINHEIRO, A GENTE CUIDA PARA VOCÊ!");
-		System.out.println("===========================================================\n");
+		System.out.println("         .-. .----. .----.  .----.    .--.   .-. .-. .-..-.\r\n"
+				+ "         | | } |__} } {-. \\ | {_} }  / {} \\  |  \\{ | | ' /\r\n"
+				+ "      {`-' } } '__} } '-} / | {_} } /  /\\  \\ | }\\  { | . \\\r\n"
+				+ "       `---' `----' `----'  `----'  `-'  `-' `-' `-' `-'`-`");
+		System.out.println("==================================================================");
+		System.out.println("                             BEM VINDE!");
+		System.out.println("==================================================================");
+		System.out.println("     SE VOCÊ NÃO CUIDA DO SEU DINHEIRO, A GENTE CUIDA PARA VOCÊ!");
+		System.out.println("==================================================================\n");
 	}
 
 	public boolean repeteOperacao() {
