@@ -52,6 +52,8 @@ public class JEDBANK {
 		//LAÇOS CONDICIONAIS RESPONSAVEL POR DIRECIONAR O USUARIO PARA A CLASSE E METODOS DE ACORDO COM A CONTA ESCOLHIDA
 		if(opcao == 1) {			
 			
+			int dia;
+			
 			contaPoupanca.setNumero(numeroConta);
 			contaPoupanca.setNomeCliente(nome);
 			
@@ -65,23 +67,39 @@ public class JEDBANK {
 				System.out.println(i + "º MOVIMENTAÇÃO DE 10");
 				
 				contaPoupanca.movimentacao();
+				
 				if(contaPoupanca.getSair() == 'S') {
+					System.out.println();
+					System.out.print("INFORME O DIA: ");
+					dia = leia.nextInt();
+					contaPoupanca.correcaoDeSaldo(dia);
 					System.out.println();
 					System.out.println("                      FINALIZADO OPERAÇÃO!");
 					main(args);
 		        }
+				else {
 				menu.setRepete(true);
 				menu.repeteOperacao();
+				}
 				if(menu.isRepete() == false){
 					System.out.println();
 					System.out.print("INFORME O DIA: ");
-					int dia = leia.nextInt();
+					dia = leia.nextInt();
 					contaPoupanca.correcaoDeSaldo(dia);
 					System.out.println();
 					System.out.println("                      FINALIZADO OPERAÇÃO!");
 					main(args);
 			    }
 			}
+			System.out.println();
+			System.out.print("INFORME O DIA: ");
+			dia = leia.nextInt();
+			
+			contaPoupanca.correcaoDeSaldo(dia);
+			
+			System.out.println();
+			System.out.println("                      FINALIZADO OPERAÇÃO!");
+			System.out.println();
 			System.out.println("VOCÊ REALIZOU O MAXIMO DE MOVIMENTAÇÕES DIÁRIAS. VOLTE AMANHÃ!");
 			main(args);
 		}	
@@ -99,11 +117,14 @@ public class JEDBANK {
 				System.out.println();
 				System.out.println(i + "º MOVIMENTAÇÃO DE 10");
 				
+				contaCorrente.setSair('N');
 				contaCorrente.movimentacao();
+				
 				if(contaCorrente.getSair() == 'S') {
 					System.out.println();
-					System.out.println("                      FINALIZADO OPERAÇÃO!");
 					contaCorrente.solicitaCheque();
+					System.out.println();
+					System.out.println("                      FINALIZADO OPERAÇÃO!");
 					main(args);							
 		        }
 				menu.setRepete(true);
@@ -133,14 +154,19 @@ public class JEDBANK {
 				System.out.println();
 				System.out.println(i + "º MOVIMENTAÇÃO DE 10");
 				
+				contaCorrente.setSair('N');
 				contaEspecial.movimentacao();
+				
 				if(contaEspecial.getSair() == 'S') {
 					System.out.println();
 					System.out.println("                      FINALIZADO OPERAÇÃO!");
 					main(args);							
 				}
-				menu.setRepete(true);
-				menu.repeteOperacao();
+				else {
+					menu.setRepete(true);
+					menu.repeteOperacao();
+					}
+				
 				if(menu.isRepete() == false){
 					System.out.println();
 					System.out.println("                      FINALIZADO OPERAÇÃO!");
@@ -166,7 +192,10 @@ public class JEDBANK {
 					System.out.println("SALDO ATUAL: R$ " + contaEmpresa.getSaldo());
 					System.out.println();
 					System.out.println(i + "º MOVIMENTAÇÃO DE 10");
+					
+					contaCorrente.setSair('N');
 					contaEmpresa.movimentacao();
+					
 					if(contaEmpresa.getSair() == 'S') {
 						System.out.println();
 						System.out.println("                      FINALIZADO OPERAÇÃO!");
@@ -198,6 +227,8 @@ public class JEDBANK {
 				System.out.println("SALDO ATUAL: R$ " + contaEstudantil.getSaldo());
 				System.out.println();
 				System.out.println(i + "º MOVIMENTAÇÃO DE 10");
+				
+				contaCorrente.setSair('N');
 				contaEstudantil.movimentacao();
 				
 				if(contaEstudantil.getSair() == 'S') {

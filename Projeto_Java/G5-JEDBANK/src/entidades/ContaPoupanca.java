@@ -25,12 +25,13 @@ public class ContaPoupanca extends Conta {
 	public void correcaoDeSaldo(int dia) {
 		if (diaAniversarioConta == dia) {
 			saldo = saldo + (saldo * taxaRendimento);
-			System.out.println("APLICADO TAXA DE RENDIMENTO DE 5%. SALDO ATUALIZADO: R$ " + getSaldo());
+			System.out.println("DATA ANIVERSARIO DA CONTA POUPANÇA - APLICADO TAXA DE RENDIMENTO DE 5%");
+			System.out.println("SALDO ATUALIZADO: R$ " + getSaldo());
 		} else {
 			System.out.println("SALDO ATUAL: " + getSaldo());
 		}
 	}
-	
+	/*
 	@Override
 	public void credito(double valorCredito) {
 		if(valorCredito <=0 ) {
@@ -51,10 +52,11 @@ public class ContaPoupanca extends Conta {
 		} else {
 			saldo = saldo - valorDebito;
 			System.out.println("DEBITO REALIZADO!");
-			System.out.println("SALDO ATUALIZADO: R$ " + saldo);
+			System.out.println("SALDO ATUAL: R$ " + saldo);
 		}
 	
 	}
+	*/
 	
 }
 

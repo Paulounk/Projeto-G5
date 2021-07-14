@@ -52,11 +52,17 @@ public class ContaEspecial extends Conta {
 				opcao = leia.next().toUpperCase().charAt(0);
 				
 				if(opcao == 'S') {
+					
+					if(valor>limite) {
+						System.out.println("NÃO É POSSIVEL DEBITAR VALOR ACIMA DO LIMITE DE R$ " + limite);
+					}
+					else {
 					resto = valor - saldo;
 					limite = limite - resto; 
 					saldo = 0.0;
 					System.out.println("LIMITE ATUALIZADO: R$ " + limite);
-					System.out.println("SALDO ATUALIZADO: R$ " + saldo);			
+					System.out.println("SALDO ATUALIZADO: R$ " + saldo);
+					}
 				}else {
 					return;
 				}

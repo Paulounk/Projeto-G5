@@ -64,7 +64,7 @@ public abstract class Conta {
 		} else {
 			this.saldo = this.saldo - valorDebito;
 			System.out.println("DEBITO REALIZADO!");
-			System.out.println("SALDO ATUALIZADO: R$ " + saldo);
+			System.out.println("SALDO ATUAL: R$ " + saldo);
 		}
 	
 	}
