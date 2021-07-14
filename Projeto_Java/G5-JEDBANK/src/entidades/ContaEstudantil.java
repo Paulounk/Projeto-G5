@@ -60,7 +60,7 @@ public class ContaEstudantil extends Conta {
 			else {
 				limiteEstudantil -= valor;
 				credito(valor);
-				System.out.println("ATUALIZADO EMPRESTIMO DISPONIVEL: R$ " + limiteEstudantil);
+				System.out.println("EMPRESTIMO DISPONIVEL ATUALIZADO: R$ " + limiteEstudantil);
 				System.out.println("SALDO ATUALIZADO: R$ " + getSaldo());
 			}
 		}

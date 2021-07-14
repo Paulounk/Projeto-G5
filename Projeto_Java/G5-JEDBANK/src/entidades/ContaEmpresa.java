@@ -60,7 +60,7 @@ public class ContaEmpresa extends Conta{
 			else {
 				emprestimoEmpresa -= valor;
 				credito(valor);
-				System.out.println("ATUALIZADO EMPRESTIMO DISPONIVEL: R$ " + emprestimoEmpresa);
+				System.out.println("EMPRESTIMO DISPONIVEL ATUALIZADO: R$ " + emprestimoEmpresa);
 				System.out.println("SALDO ATUALIZADO: R$ " + getSaldo());
 			}
 		}

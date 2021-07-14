@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public abstract class Conta {
 	
+
 	Scanner leia = new Scanner(System.in);
 	
 	//ATRIBUTOS
@@ -24,6 +25,9 @@ public abstract class Conta {
 	//ENCAPSULAMENTO - GETTERS AND SETTERS
 	public int getNumero() {
 		return numero;
+	}
+	public void setNumero(int numero) {
+		this.numero = numero;
 	}
 
 	public String getNomeCliente() {
