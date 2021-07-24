@@ -4,7 +4,7 @@ Projeto referente a um sistema de banco, feito pelo Grupo 5 do primeiro modulo d
 
 Versão feita no Portugol e em Java (POO).
 
-Equipe:
+Team dev:
 
 - Caroline: responsavel pela Conta Poupança.
 - Kevin: responsavel pela Conta Corrente.
